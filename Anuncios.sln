@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anuncios.API", "Anuncios.API\Anuncios.API.csproj", "{D737F87F-47A0-44FA-AC9B-1A1CBE97F6CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anuncios.API", "Anuncios.API\Anuncios.API.csproj", "{D737F87F-47A0-44FA-AC9B-1A1CBE97F6CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anuncios.Data", "Anuncios.Data\Anuncios.Data.csproj", "{75DC6034-8E73-4D15-B27A-5D44650BB122}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anuncios.Data", "Anuncios.Data\Anuncios.Data.csproj", "{75DC6034-8E73-4D15-B27A-5D44650BB122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anuncios.Domain", "Anuncios.Domain\Anuncios.Domain.csproj", "{EC96EFEC-90FF-48D4-9015-86F8CA990B19}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Anuncios.Domain", "Anuncios.Domain\Anuncios.Domain.csproj", "{EC96EFEC-90FF-48D4-9015-86F8CA990B19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

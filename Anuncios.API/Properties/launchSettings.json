@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Anuncios.API": {
+    "Anuncio.API": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

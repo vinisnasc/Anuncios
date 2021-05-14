@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Anuncios.API
+namespace Anuncio.API
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace Anuncios.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Anuncios.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Anuncio.API", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace Anuncios.API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Anuncios.API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Anuncio.API v1"));
             }
 
             app.UseHttpsRedirection();
