@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Anuncio.API.Controllers
+namespace Anuncios.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

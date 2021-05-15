@@ -1,6 +1,6 @@
 using System;
 
-namespace Anuncio.API
+namespace Anuncios.API
 {
     public class WeatherForecast
     {

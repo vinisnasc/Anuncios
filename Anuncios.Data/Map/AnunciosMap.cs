@@ -21,11 +21,11 @@ namespace Anuncios.Data.Map
                 .IsRequired();
 
             builder.Property(x => x.DataInicio)
-                .HasColumnType("datetime2")
+                .HasColumnType("datetime")
                 .IsRequired();
 
             builder.Property(x => x.DataFim)
-               .HasColumnType("datetime2")
+               .HasColumnType("datetime")
                .IsRequired();
 
             builder.Property(x => x.InvestDia)

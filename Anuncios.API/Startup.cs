@@ -1,7 +1,11 @@
+using Anuncios.Data;
+using Anuncios.Data.Repository.Implementation;
+using Anuncios.Data.Repository.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -12,7 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Anuncio.API
+namespace Anuncios.API
 {
     public class Startup
     {
@@ -32,7 +36,15 @@ namespace Anuncio.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Anuncio.API", Version = "v1" });
             });
+
+            services.AddControllers();
+
+            services.AddDbContext<Context>(
+                options => options.UseSqlServer(Configuration.GetConnectionString("SQLConnection")));
+
+            services.AddScoped<IAnunciosRepository, AnuncioRepository>();
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
