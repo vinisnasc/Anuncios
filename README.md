@@ -27,11 +27,11 @@ Também é possível baixar o conteúdo em formato `.zip` clicando no botão "Cl
 Certifique-se de ter o .NET Core instalado, caso não tenha, é possível fazer download do .NET Core 5 [na página oficial](https://dotnet.microsoft.com/download/dotnet) da Microsoft.  
 Também é preciso estar com o banco de dados instalado, recomendável a versão EXPRESS do SQL Server, disponível gratuitamente [na página de download](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads) da Microsoft.
 
-A string de conexão com o banco deve ser definida. Vá até o arquivo `appsettings.json`, que se encontra em Anuncios e edite o nome do servidor, incluindo o nome do seu servidor local, segundo o modelo: `Server=NomeDoServidorAqui;DataBase=AnunciosCRUD;Trusted_Connection=True`
+A string de conexão com o banco deve ser definida. Vá até o arquivo `appsettings.json`, que se encontra em Anuncios.API e edite o nome do servidor, incluindo o nome do seu servidor local, segundo o modelo: `Server=NomeDoServidorAqui;DataBase=AnunciosCRUD;Trusted_Connection=True`
 
 **Compilar e executar com CLI do .NET:**
 
-A seguir, abra o prompt de comando no diretório do projeto Anuncios e digite:
+A seguir, abra o prompt de comando no diretório do projeto Anuncios.API e digite:
 
 ```console
 $ dotnet run
