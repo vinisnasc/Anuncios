@@ -8,7 +8,7 @@ O objetivo é criar um sistema de cadastro de anúncios com uma calculadora inte
 Para isso, criei uma Web API utilizando **ASP.NET Core 5 (C#)**, com as seguintes características:
 
 - **Estrutura do código** que visa à separação de responsabilidades e busca evitar repetição.
-- **Persistência de Dados** fazendo do Entity Framework Core (ORM) para realizar o mapeamento para o banco de dados por meio do code-first.
+- **Persistência de Dados** fazendo uso do Entity Framework Core (ORM) para realizar o mapeamento para o banco de dados por meio do code-first.
 - **Separação em camadas** baseada no modelo DDD (domain-driven design), consistindo em _Domain_ (classes e interfaces), _Data_ (camada de infraestrutura responsável pela persistência) e _API_ (camada de aplicação onde ficam os controllers).
 - **Documentação** dos endpoints da API utilizando o _Swagger_ e comentários XML.
 
