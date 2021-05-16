@@ -29,8 +29,20 @@ namespace Anuncios.Data.Map
                .IsRequired();
 
             builder.Property(x => x.InvestDia)
-                .HasColumnType("double")
+                .HasColumnType("float")
                 .IsRequired();
+
+            builder.Property(x => x.InvestTotal)
+                .HasColumnType("float");
+
+            builder.Property(x => x.MaxVisualizacao)
+                .HasColumnType("float");
+
+            builder.Property(x => x.MaxCliques)
+            .HasColumnType("float");
+
+            builder.Property(x => x.MaxComp)
+                .HasColumnType("float");
         }
     }
 }

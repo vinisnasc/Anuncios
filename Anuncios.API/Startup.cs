@@ -3,18 +3,14 @@ using Anuncios.Data.Repository.Implementation;
 using Anuncios.Data.Repository.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 
 namespace Anuncios.API
 {
@@ -34,7 +30,22 @@ namespace Anuncios.API
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Anuncio.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Gerenciador de Anúncios",
+                    Description = "API de gereciamento de anúncios.",
+                    TermsOfService = new Uri("https://github.com/viniciusnasc/Anuncios"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Vinicius Nascimento",
+                        Email = "vini.souza00@gmail.com",
+                        Url = new Uri("https://github.com/viniciusnasc")
+                    }
+                });
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             services.AddControllers();

@@ -37,7 +37,19 @@ namespace Anuncios.Data.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<double>("InvestDia")
-                        .HasColumnType("double");
+                        .HasColumnType("float");
+
+                    b.Property<double>("InvestTotal")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxCliques")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxComp")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxVisualizacao")
+                        .HasColumnType("float");
 
                     b.Property<string>("NomeAnuncio")
                         .IsRequired()

@@ -17,7 +17,7 @@ namespace Anuncios.Data.Migrations
                     Cliente = table.Column<string>(type: "varchar(40)", nullable: false),
                     DataInicio = table.Column<DateTime>(type: "datetime", nullable: false),
                     DataFim = table.Column<DateTime>(type: "datetime", nullable: false),
-                    InvestDia = table.Column<double>(type: "double", nullable: false)
+                    InvestDia = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

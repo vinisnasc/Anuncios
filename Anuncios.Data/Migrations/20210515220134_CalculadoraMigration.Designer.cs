@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Anuncios.Data.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20210515200451_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20210515220134_CalculadoraMigration")]
+    partial class CalculadoraMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,6 +39,18 @@ namespace Anuncios.Data.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<double>("InvestDia")
+                        .HasColumnType("float");
+
+                    b.Property<double>("InvestTotal")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxCliques")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxComp")
+                        .HasColumnType("float");
+
+                    b.Property<double>("MaxVisualizacao")
                         .HasColumnType("float");
 
                     b.Property<string>("NomeAnuncio")

@@ -24,7 +24,7 @@ namespace Anuncios.Data.Repository.Implementation
             return _context.Set<T>().FirstOrDefault(x => x.Id.Equals(id));
         }
 
-        public void Insert(T entity)
+        public virtual void Insert(T entity)
         {
             _context.Set<T>().Add(entity);
             _context.SaveChanges();
